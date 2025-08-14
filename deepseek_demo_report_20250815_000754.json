@@ -1,0 +1,18 @@
+{
+  "timestamp": "20250815_000754",
+  "model": "deepseek-r1:14b",
+  "test_cases_count": 3,
+  "test_cases_file": "deepseek_demo_test_cases_20250815_000754.json",
+  "ai_response_file": "deepseek_demo_ai_response_20250815_000754.txt",
+  "summary": {
+    "total_cases": 3,
+    "endpoints_covered": 1,
+    "test_types": [
+      "functional"
+    ],
+    "priorities": [
+      "medium",
+      "high"
+    ]
+  }
+}

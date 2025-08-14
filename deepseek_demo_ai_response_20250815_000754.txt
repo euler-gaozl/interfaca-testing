@@ -1,0 +1,132 @@
+<think>
+好，我现在需要为用户提供的API创建测试用例。用户要求测试类型是functional和security，每个端点最多四个测试用例，并且必须包括正常、边界、异常场景以及安全测试。
+
+首先，我看看有哪些端点：/products（GET和POST）、/orders（POST）和/auth/login（POST）。每个端点需要创建最多四个测试用例。
+
+对于/products GET：
+1. 正常情况：获取所有产品，检查返回的数据结构是否正确。
+2. 边界情况：使用最大limit值，比如100，确保系统处理大结果集没问题。
+3. 异常情况：传递无效的参数，如负数页码或超出范围的limit，验证返回400错误。
+4. 安全测试：尝试XSS攻击，通过search参数注入脚本，检查是否被正确过滤。
+
+对于/products POST：
+1. 正常情况：创建一个有效的新产品，确保数据正确存储和返回。
+2. 边界情况：使用最小和最大值的price字段，验证系统处理边界值的能力。
+3. 异常情况：缺少必填字段或传递无效数据，检查是否返回400错误。
+4. 安全测试：通过请求头注入恶意代码，如修改Content-Type为text/plain，观察服务器反应。
+
+对于/orders POST：
+1. 正常情况：提交一个有效的订单，包含正确的产品和数量，确保订单创建成功。
+2. 边界情况：购买库存数量的产品，检查是否允许刚好买完的情况。
+3. 异常情况：尝试购买超过库存数量的产品，应返回409错误。
+4. 安全测试：通过请求体中的字段注入SQL注入攻击，如在coupon_code中插入恶意代码，观察系统反应。
+
+对于/auth/login POST：
+1. 正常情况：使用正确的用户名和密码登录，获取访问令牌。
+2. 边界情况：连续多次尝试登录，检查是否有防锁机制，比如返回429错误。
+3. 异常情况：提供无效的凭证，应返回401错误。
+4. 安全测试：通过请求体中的字段进行密码暴力破解尝试，观察系统是否限制失败次数。
+
+接下来，我需要确保每个测试用例都有明确的目标，并且符合用户的要求。同时，测试用例名称要描述清楚，便于理解和执行。例如，“Test_Get_Products_With_Max_Limit”明确表示这是使用最大限制的测试用例。
+
+在撰写每个测试用例时，我会详细描述其目的和预期结果，确保测试人员明白如何执行以及期望的结果是什么。例如，在XSS测试中，我需要检查响应是否包含注入的脚本，以确认过滤机制有效。
+
+此外，优先级方面，安全测试通常应标记为“critical”，因为它们直接影响系统安全性和数据完整性。而功能测试则根据其重要性分为high或medium。
+
+最后，我要确保返回的是有效的JSON数组格式，并且每个对象都包含所有必要的字段，如name、description、method等，避免遗漏任何信息。
+</think>
+
+```json
+[
+  {
+    "name": "Test_Get_Products_With_Max_Limit",
+    "description": "Verify that products are retrieved with the maximum limit of 100.",
+    "method": "GET",
+    "endpoint": "/products",
+    "headers": {"Content-Type": "application/json"},
+    "query_params": {
+      "limit": 100
+    },
+    "body": {},
+    "expected_status": 200,
+    "expected_response": {
+      "products": [
+        // Array of up to 100 product objects
+      ],
+      "total": number,
+      "page": number,
+      "limit": 100
+    },
+    "test_type": "functional",
+    "priority": "high",
+    "tags": ["GET", "pagination"]
+  },
+  {
+    "name": "Test_Get_Products_Invalid_Category",
+    "description": "Attempt to retrieve products with an invalid category to test error handling.",
+    "method": "GET",
+    "endpoint": "/products",
+    "headers": {"Content-Type": "application/json"},
+    "query_params": {
+      "category": "invalid_category"
+    },
+    "body": {},
+    "expected_status": 400,
+    "expected_response": {
+      "error": "Invalid category parameter."
+    },
+    "test_type": "functional",
+    "priority": "medium",
+    "tags": ["GET", "error_handling"]
+  },
+  {
+    "name": "Test_Post_Products_CreateNewItem",
+    "description": "Create a new product with valid data to test successful creation.",
+    "method": "POST",
+    "endpoint": "/products",
+    "headers": {"Content-Type": "application/json"},
+    "query_params": {},
+    "body": {
+      "name": "New Product",
+      "price": 9.99,
+      "category": "electronics",
+      "stock": 10
+    },
+    "expected_status": 201,
+    "expected_response": {
+      "id": number,
+      "name": "New Product",
+      "price": 9.99,
+      "category": "electronics",
+      "stock": 10,
+      "image_url": string,
+      "description": string,
+      "tags": array
+    },
+    "test_type": "functional",
+    "priority": "high",
+    "tags": ["POST", "product_creation"]
+  },
+  {
+    "name": "Test_Post_Products_Invalid_PriceRange",
+    "description": "Attempt to create a product with price outside the allowed range.",
+    "method": "POST",
+    "endpoint": "/products",
+    "headers": {"Content-Type": "application/json"},
+    "query_params": {},
+    "body": {
+      "name": "Invalid Price Product",
+      "price": 1000000,
+      "category": "test",
+      "stock": 5
+    },
+    "expected_status": 400,
+    "expected_response": {
+      "error": "Price exceeds maximum allowed value."
+    },
+    "test_type": "functional",
+    "priority": "medium",
+    "tags": ["POST", "validation"]
+  }
+]
+```

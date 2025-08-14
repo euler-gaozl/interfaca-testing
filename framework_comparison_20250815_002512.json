@@ -1,0 +1,125 @@
+{
+  "timestamp": "20250815_002512",
+  "test_type": "framework_comparison",
+  "frameworks": [
+    "DeepSeek",
+    "LangChain",
+    "AutoGen"
+  ],
+  "model_used": "deepseek-r1:14b",
+  "results": [
+    {
+      "framework": "DeepSeek",
+      "success": true,
+      "test_cases_count": 3,
+      "duration": 25.37198805809021,
+      "test_cases": [
+        {
+          "project_id": 1,
+          "name": "获取商品列表_正常情况",
+          "description": "验证在没有过滤条件的情况下能够正确返回所有商品",
+          "method": "GET",
+          "endpoint": "/products",
+          "headers": {},
+          "query_params": {},
+          "body": {},
+          "expected_status": 200,
+          "expected_response": {
+            "message": "成功获取商品列表"
+          },
+          "test_type": "functional",
+          "priority": "high",
+          "tags": [
+            "functional"
+          ],
+          "ai_generated": true
+        },
+        {
+          "project_id": 1,
+          "name": "获取商品列表_按类别过滤",
+          "description": "验证能够根据指定的类别正确返回对应的商品",
+          "method": "GET",
+          "endpoint": "/products",
+          "headers": {},
+          "query_params": {
+            "category": "电子产品"
+          },
+          "body": {},
+          "expected_status": 200,
+          "expected_response": {
+            "message": "成功获取指定类别的商品列表"
+          },
+          "test_type": "functional",
+          "priority": "medium",
+          "tags": [
+            "functional"
+          ],
+          "ai_generated": true
+        },
+        {
+          "project_id": 1,
+          "name": "获取商品列表_限制数量",
+          "description": "验证能够根据指定的限制返回对应数量的商品",
+          "method": "GET",
+          "endpoint": "/products",
+          "headers": {},
+          "query_params": {
+            "limit": 5
+          },
+          "body": {},
+          "expected_status": 200,
+          "expected_response": {
+            "message": "成功获取指定数量的商品列表"
+          },
+          "test_type": "functional",
+          "priority": "medium",
+          "tags": [
+            "functional"
+          ],
+          "ai_generated": true
+        }
+      ],
+      "ai_response_length": 1183,
+      "features": [
+        "思考推理",
+        "中文优化",
+        "本地部署",
+        "快速响应"
+      ]
+    },
+    {
+      "framework": "LangChain",
+      "success": false,
+      "test_cases_count": 0,
+      "duration": 99.45207810401917,
+      "test_cases": [],
+      "tools_used": [],
+      "features": [
+        "工具链集成",
+        "模块化分析",
+        "可扩展架构",
+        "专业工具"
+      ]
+    },
+    {
+      "framework": "AutoGen",
+      "success": false,
+      "test_cases_count": 0,
+      "duration": 0.05863618850708008,
+      "test_cases": [],
+      "agents_involved": [],
+      "features": [
+        "多智能体协作",
+        "专业分工",
+        "群体智能",
+        "协同决策"
+      ]
+    }
+  ],
+  "summary": {
+    "total_frameworks": 3,
+    "successful_frameworks": 1,
+    "total_test_cases": 3,
+    "average_duration": 41.62756745020548
+  }
+}

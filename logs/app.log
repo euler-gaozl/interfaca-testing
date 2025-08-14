@@ -1,0 +1,20 @@
+2025-08-14 23:13:29 | WARNING  | src.agents.base_agent:__init__:72 - 使用模拟AI客户端: openai
+2025-08-14 23:13:29 | INFO     | src.agents.test_generator:process:27 - 开始生成测试用例，API规范: 1853 字符
+2025-08-14 23:13:29 | WARNING  | src.agents.test_generator:_parse_ai_response:136 - 无法解析AI响应中的JSON，生成默认测试用例
+2025-08-14 23:13:29 | INFO     | src.agents.test_generator:process:43 - 成功生成 3 个测试用例
+2025-08-14 23:25:27 | WARNING  | src.agents.base_agent:__init__:72 - 使用模拟AI客户端: openai
+2025-08-14 23:25:27 | INFO     | src.agents.test_generator:process:27 - 开始生成测试用例，API规范: 1853 字符
+2025-08-14 23:25:28 | WARNING  | src.agents.test_generator:_parse_ai_response:136 - 无法解析AI响应中的JSON，生成默认测试用例
+2025-08-14 23:25:28 | INFO     | src.agents.test_generator:process:43 - 成功生成 3 个测试用例
+2025-08-14 23:30:19 | WARNING  | src.agents.base_agent:__init__:72 - 使用模拟AI客户端: openai
+2025-08-14 23:30:19 | INFO     | src.agents.test_generator:process:27 - 开始生成测试用例，API规范: 1853 字符
+2025-08-14 23:30:19 | WARNING  | src.agents.test_generator:_parse_ai_response:136 - 无法解析AI响应中的JSON，生成默认测试用例
+2025-08-14 23:30:19 | INFO     | src.agents.test_generator:process:43 - 成功生成 3 个测试用例
+2025-08-14 23:35:01 | WARNING  | src.agents.base_agent:__init__:72 - 使用模拟AI客户端: openai
+2025-08-14 23:35:01 | INFO     | src.agents.test_generator:process:27 - 开始生成测试用例，API规范: 1853 字符
+2025-08-14 23:35:02 | WARNING  | src.agents.test_generator:_parse_ai_response:145 - 无法解析AI响应中的JSON，生成默认测试用例
+2025-08-14 23:35:02 | INFO     | src.agents.test_generator:process:52 - 成功生成 3 个测试用例
+2025-08-14 23:49:19 | WARNING  | src.agents.base_agent:__init__:72 - 使用模拟AI客户端: openai
+2025-08-14 23:49:19 | INFO     | src.agents.test_generator:process:27 - 开始生成测试用例，API规范: 1853 字符
+2025-08-14 23:49:20 | WARNING  | src.agents.test_generator:_parse_ai_response:145 - 无法解析AI响应中的JSON，生成默认测试用例
+2025-08-14 23:49:20 | INFO     | src.agents.test_generator:process:52 - 成功生成 3 个测试用例

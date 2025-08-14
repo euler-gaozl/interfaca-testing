@@ -1,0 +1,53 @@
+# AI模型配置
+ai_models:
+  primary: "ollama"  # 主要模型: openai, claude, ollama
+  fallback: "openai"  # 备用模型
+  openai:
+    api_key: "${OPENAI_API_KEY}"
+    model: "gpt-4"
+    base_url: "https://api.openai.com/v1"
+  ollama:
+    base_url: "http://localhost:11434"
+    model: "deepseek-r1:14b"
+  claude:
+    api_key: "${CLAUDE_API_KEY}"
+    model: "claude-3-sonnet-20240229"
+
+# 数据库配置
+database:
+  type: "sqlite"
+  path: "./data/test.db"
+  echo: false
+
+# 服务配置
+server:
+  host: "0.0.0.0"
+  port: 8000
+  debug: true
+  reload: true
+
+# 测试配置
+testing:
+  protocols: ["rest", "graphql", "websocket"]
+  concurrent_limit: 10
+  timeout: 30
+  retry_count: 3
+  
+# 报告配置
+reporting:
+  output_dir: "./reports"
+  formats: ["html", "json", "pdf"]
+  template_dir: "./templates"
+
+# 日志配置
+logging:
+  level: "INFO"
+  file: "./logs/app.log"
+  rotation: "1 day"
+  retention: "7 days"
+
+# 安全配置
+security:
+  secret_key: "${SECRET_KEY}"
+  algorithm: "HS256"
+  access_token_expire_minutes: 30

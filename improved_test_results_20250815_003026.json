@@ -1,0 +1,465 @@
+[
+  {
+    "framework": "DeepSeek",
+    "success": true,
+    "test_cases": [
+      {
+        "project_id": 1,
+        "name": "基于API规范，我生成了以下测试用例：",
+        "description": "",
+        "method": "GET",
+        "endpoint": "/",
+        "headers": {},
+        "query_params": {},
+        "body": {},
+        "expected_status": 200,
+        "expected_response": {},
+        "test_type": "functional",
+        "priority": "medium",
+        "tags": [],
+        "ai_generated": true
+      },
+      {
+        "project_id": 1,
+        "name": "1. 正常请求测试",
+        "description": "",
+        "method": "GET",
+        "endpoint": "/",
+        "headers": {},
+        "query_params": {},
+        "body": {},
+        "expected_status": 200,
+        "expected_response": {},
+        "test_type": "functional",
+        "priority": "medium",
+        "tags": [],
+        "ai_generated": true
+      },
+      {
+        "project_id": 1,
+        "name": "2. 参数验证测试",
+        "description": "",
+        "method": "GET",
+        "endpoint": "/",
+        "headers": {},
+        "query_params": {},
+        "body": {},
+        "expected_status": 200,
+        "expected_response": {},
+        "test_type": "functional",
+        "priority": "medium",
+        "tags": [],
+        "ai_generated": true
+      },
+      {
+        "project_id": 1,
+        "name": "3. 边界值测试",
+        "description": "",
+        "method": "GET",
+        "endpoint": "/",
+        "headers": {},
+        "query_params": {},
+        "body": {},
+        "expected_status": 200,
+        "expected_response": {},
+        "test_type": "functional",
+        "priority": "medium",
+        "tags": [],
+        "ai_generated": true
+      },
+      {
+        "project_id": 1,
+        "name": "4. 错误处理测试",
+        "description": "",
+        "method": "GET",
+        "endpoint": "/",
+        "headers": {},
+        "query_params": {},
+        "body": {},
+        "expected_status": 200,
+        "expected_response": {},
+        "test_type": "functional",
+        "priority": "medium",
+        "tags": [],
+        "ai_generated": true
+      },
+      {
+        "project_id": 1,
+        "name": "5. 安全性测试",
+        "description": "",
+        "method": "GET",
+        "endpoint": "/",
+        "headers": {},
+        "query_params": {},
+        "body": {},
+        "expected_status": 200,
+        "expected_response": {},
+        "test_type": "functional",
+        "priority": "medium",
+        "tags": [],
+        "ai_generated": true
+      }
+    ],
+    "duration": 0.5021860599517822,
+    "error": null,
+    "details": {},
+    "test_case_count": 6,
+    "response": {
+      "success": true,
+      "test_cases": [
+        {
+          "project_id": 1,
+          "name": "基于API规范，我生成了以下测试用例：",
+          "description": "",
+          "method": "GET",
+          "endpoint": "/",
+          "headers": {},
+          "query_params": {},
+          "body": {},
+          "expected_status": 200,
+          "expected_response": {},
+          "test_type": "functional",
+          "priority": "medium",
+          "tags": [],
+          "ai_generated": true
+        },
+        {
+          "project_id": 1,
+          "name": "1. 正常请求测试",
+          "description": "",
+          "method": "GET",
+          "endpoint": "/",
+          "headers": {},
+          "query_params": {},
+          "body": {},
+          "expected_status": 200,
+          "expected_response": {},
+          "test_type": "functional",
+          "priority": "medium",
+          "tags": [],
+          "ai_generated": true
+        },
+        {
+          "project_id": 1,
+          "name": "2. 参数验证测试",
+          "description": "",
+          "method": "GET",
+          "endpoint": "/",
+          "headers": {},
+          "query_params": {},
+          "body": {},
+          "expected_status": 200,
+          "expected_response": {},
+          "test_type": "functional",
+          "priority": "medium",
+          "tags": [],
+          "ai_generated": true
+        },
+        {
+          "project_id": 1,
+          "name": "3. 边界值测试",
+          "description": "",
+          "method": "GET",
+          "endpoint": "/",
+          "headers": {},
+          "query_params": {},
+          "body": {},
+          "expected_status": 200,
+          "expected_response": {},
+          "test_type": "functional",
+          "priority": "medium",
+          "tags": [],
+          "ai_generated": true
+        },
+        {
+          "project_id": 1,
+          "name": "4. 错误处理测试",
+          "description": "",
+          "method": "GET",
+          "endpoint": "/",
+          "headers": {},
+          "query_params": {},
+          "body": {},
+          "expected_status": 200,
+          "expected_response": {},
+          "test_type": "functional",
+          "priority": "medium",
+          "tags": [],
+          "ai_generated": true
+        },
+        {
+          "project_id": 1,
+          "name": "5. 安全性测试",
+          "description": "",
+          "method": "GET",
+          "endpoint": "/",
+          "headers": {},
+          "query_params": {},
+          "body": {},
+          "expected_status": 200,
+          "expected_response": {},
+          "test_type": "functional",
+          "priority": "medium",
+          "tags": [],
+          "ai_generated": true
+        }
+      ],
+      "generated_count": 6,
+      "ai_response": "基于API规范，我生成了以下测试用例：\n1. 正常请求测试\n2. 参数验证测试\n3. 边界值测试\n4. 错误处理测试\n5. 安全性测试"
+    },
+    "quality_score": 6.5,
+    "features": [
+      "思考推理",
+      "中文优化",
+      "本地部署",
+      "快速响应"
+    ]
+  },
+  {
+    "framework": "LangChain",
+    "success": false,
+    "test_cases": [],
+    "duration": 1.1670708656311035,
+    "error": "Error code: 401 - {'error': {'message': 'Incorrect API key provided: your_ope************here. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'param': None, 'code': 'invalid_api_key'}}",
+    "details": {},
+    "quality_score": 0.0,
+    "features": [
+      "工具链丰富",
+      "模块化设计",
+      "可扩展性",
+      "生态完善"
+    ]
+  },
+  {
+    "framework": "AutoGen",
+    "success": true,
+    "test_cases": [
+      {
+        "project_id": 1,
+        "name": "架构师设计的基础API测试",
+        "description": "由测试架构师设计的基础API功能验证",
+        "method": "GET",
+        "endpoint": "/api/health",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "query_params": {},
+        "body": {},
+        "expected_status": 200,
+        "expected_response": {},
+        "test_type": "functional",
+        "priority": "high",
+        "tags": [
+          "autogen",
+          "architecture"
+        ],
+        "ai_generated": true,
+        "agent_source": "TestArchitect"
+      },
+      {
+        "project_id": 1,
+        "name": "功能专家设计的业务流程测试",
+        "description": "由功能测试专家设计的核心业务流程验证",
+        "method": "POST",
+        "endpoint": "/api/business/process",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "query_params": {},
+        "body": {
+          "action": "validate"
+        },
+        "expected_status": 200,
+        "expected_response": {},
+        "test_type": "functional",
+        "priority": "critical",
+        "tags": [
+          "autogen",
+          "functional"
+        ],
+        "ai_generated": true,
+        "agent_source": "FunctionalTester"
+      },
+      {
+        "project_id": 1,
+        "name": "安全专家设计的权限验证测试",
+        "description": "由安全测试专家设计的权限和认证验证",
+        "method": "GET",
+        "endpoint": "/api/secure/data",
+        "headers": {
+          "Authorization": "Bearer invalid_token"
+        },
+        "query_params": {},
+        "body": {},
+        "expected_status": 401,
+        "expected_response": {},
+        "test_type": "security",
+        "priority": "critical",
+        "tags": [
+          "autogen",
+          "security"
+        ],
+        "ai_generated": true,
+        "agent_source": "SecurityTester"
+      },
+      {
+        "project_id": 1,
+        "name": "性能专家设计的负载测试",
+        "description": "由性能测试专家设计的系统负载能力验证",
+        "method": "GET",
+        "endpoint": "/api/performance/load",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "query_params": {
+          "concurrent_users": "100"
+        },
+        "body": {},
+        "expected_status": 200,
+        "expected_response": {},
+        "test_type": "performance",
+        "priority": "medium",
+        "tags": [
+          "autogen",
+          "performance"
+        ],
+        "ai_generated": true,
+        "agent_source": "PerformanceTester"
+      }
+    ],
+    "duration": 2.1837210655212402,
+    "error": null,
+    "details": {
+      "agents_involved": [
+        "TestArchitect",
+        "FunctionalTester",
+        "SecurityTester",
+        "PerformanceTester"
+      ],
+      "collaboration_messages": [
+        "TestArchitect: 我分析了API架构，建议采用分层测试策略...",
+        "FunctionalTester: 我设计了核心功能测试用例，覆盖主要业务流程...",
+        "SecurityTester: 我识别了3个潜在安全风险，设计了相应的安全测试...",
+        "PerformanceTester: 我设计了性能测试场景，包括负载和压力测试..."
+      ]
+    },
+    "test_case_count": 4,
+    "response": {
+      "success": true,
+      "test_cases": [
+        {
+          "project_id": 1,
+          "name": "架构师设计的基础API测试",
+          "description": "由测试架构师设计的基础API功能验证",
+          "method": "GET",
+          "endpoint": "/api/health",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "query_params": {},
+          "body": {},
+          "expected_status": 200,
+          "expected_response": {},
+          "test_type": "functional",
+          "priority": "high",
+          "tags": [
+            "autogen",
+            "architecture"
+          ],
+          "ai_generated": true,
+          "agent_source": "TestArchitect"
+        },
+        {
+          "project_id": 1,
+          "name": "功能专家设计的业务流程测试",
+          "description": "由功能测试专家设计的核心业务流程验证",
+          "method": "POST",
+          "endpoint": "/api/business/process",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "query_params": {},
+          "body": {
+            "action": "validate"
+          },
+          "expected_status": 200,
+          "expected_response": {},
+          "test_type": "functional",
+          "priority": "critical",
+          "tags": [
+            "autogen",
+            "functional"
+          ],
+          "ai_generated": true,
+          "agent_source": "FunctionalTester"
+        },
+        {
+          "project_id": 1,
+          "name": "安全专家设计的权限验证测试",
+          "description": "由安全测试专家设计的权限和认证验证",
+          "method": "GET",
+          "endpoint": "/api/secure/data",
+          "headers": {
+            "Authorization": "Bearer invalid_token"
+          },
+          "query_params": {},
+          "body": {},
+          "expected_status": 401,
+          "expected_response": {},
+          "test_type": "security",
+          "priority": "critical",
+          "tags": [
+            "autogen",
+            "security"
+          ],
+          "ai_generated": true,
+          "agent_source": "SecurityTester"
+        },
+        {
+          "project_id": 1,
+          "name": "性能专家设计的负载测试",
+          "description": "由性能测试专家设计的系统负载能力验证",
+          "method": "GET",
+          "endpoint": "/api/performance/load",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "query_params": {
+            "concurrent_users": "100"
+          },
+          "body": {},
+          "expected_status": 200,
+          "expected_response": {},
+          "test_type": "performance",
+          "priority": "medium",
+          "tags": [
+            "autogen",
+            "performance"
+          ],
+          "ai_generated": true,
+          "agent_source": "PerformanceTester"
+        }
+      ],
+      "collaboration_messages": [
+        "TestArchitect: 我分析了API架构，建议采用分层测试策略...",
+        "FunctionalTester: 我设计了核心功能测试用例，覆盖主要业务流程...",
+        "SecurityTester: 我识别了3个潜在安全风险，设计了相应的安全测试...",
+        "PerformanceTester: 我设计了性能测试场景，包括负载和压力测试..."
+      ],
+      "agents_involved": [
+        "TestArchitect",
+        "FunctionalTester",
+        "SecurityTester",
+        "PerformanceTester"
+      ],
+      "mock_mode": true
+    },
+    "quality_score": 9.5,
+    "features": [
+      "多智能体协作",
+      "专业分工",
+      "群体智能",
+      "角色扮演"
+    ]
+  }
+]

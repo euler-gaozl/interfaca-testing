@@ -1,0 +1,76 @@
+{
+  "execution_summary": {
+    "total_tests": 3,
+    "passed": 3,
+    "failed": 0,
+    "pass_rate": "100.0%",
+    "avg_response_time": "130ms"
+  },
+  "detailed_results": [
+    {
+      "test_case_id": 1,
+      "test_case_name": "基础GET请求测试",
+      "status": "passed",
+      "response_time": 0.12,
+      "actual_status": 200,
+      "expected_status": 200,
+      "actual_response": {
+        "message": "success",
+        "data": {}
+      },
+      "error_message": null,
+      "started_at": "2025-08-14 23:50:27.513476",
+      "completed_at": "2025-08-14 23:50:27.513481"
+    },
+    {
+      "test_case_id": 2,
+      "test_case_name": "POST请求数据验证测试",
+      "status": "passed",
+      "response_time": 0.12,
+      "actual_status": 201,
+      "expected_status": 201,
+      "actual_response": {
+        "message": "success",
+        "data": {}
+      },
+      "error_message": null,
+      "started_at": "2025-08-14 23:50:28.013837",
+      "completed_at": "2025-08-14 23:50:28.013851"
+    },
+    {
+      "test_case_id": 3,
+      "test_case_name": "无效参数错误处理测试",
+      "status": "passed",
+      "response_time": 0.15,
+      "actual_status": 400,
+      "expected_status": 400,
+      "actual_response": {
+        "message": "success",
+        "data": {}
+      },
+      "error_message": null,
+      "started_at": "2025-08-14 23:50:28.515318",
+      "completed_at": "2025-08-14 23:50:28.515331"
+    }
+  ],
+  "ai_analysis": {
+    "summary": "测试执行完成，发现1个安全相关问题需要关注",
+    "insights": [
+      "API响应时间整体表现良好，平均响应时间在可接受范围内",
+      "功能性测试全部通过，基础功能运行正常",
+      "安全测试发现潜在漏洞，建议加强输入验证"
+    ],
+    "recommendations": [
+      "对用户输入进行更严格的验证和过滤",
+      "添加更多的边界值测试用例",
+      "考虑添加性能压力测试",
+      "建议实施API访问频率限制"
+    ],
+    "risk_assessment": {
+      "security_risk": "中等",
+      "performance_risk": "低",
+      "reliability_risk": "低"
+    }
+  },
+  "generated_at": "2025-08-14T23:50:28.519227"
+}
