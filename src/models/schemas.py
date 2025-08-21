@@ -13,6 +13,14 @@ class TestStatus(str, Enum):
     ERROR = "error"
     SKIPPED = "skipped"
 
+class ExecutionStatus(str, Enum):
+    """执行状态枚举"""
+    PENDING = "pending"
+    RUNNING = "running"
+    COMPLETED = "completed"
+    FAILED = "failed"
+    STOPPED = "stopped"
+
 class TestType(str, Enum):
     """测试类型枚举"""
     FUNCTIONAL = "functional"
@@ -105,11 +113,28 @@ class TestExecutionResult(BaseSchema):
     started_at: datetime
     completed_at: Optional[datetime] = None
 
+class BatchExecutionRequest(BaseSchema):
+    """批量执行请求"""
+    project_id: int
+    test_case_ids: List[int]  # 指定测试用例
+    execution_config: Optional[Dict[str, Any]] = None
+    concurrent_limit: int = 5  # 并发限制
+    timeout: int = 30  # 超时时间(秒)
+    retry_count: int = 3  # 重试次数
+    execution_strategy: str = "parallel"  # parallel, serial, mixed
+
 class TestBatchExecution(BaseSchema):
     """批量测试执行"""
     execution_id: str
     project_id: int
     test_case_ids: List[int]
+    status: ExecutionStatus = ExecutionStatus.PENDING
+    concurrent_limit: int = 5
+    timeout: int = 30
+    retry_count: int = 3
+    execution_strategy: str = "parallel"
+    started_at: datetime
+    completed_at: Optional[datetime] = None
     results: List[TestExecutionResult] = []
     summary: Optional[Dict[str, Any]] = None
 
