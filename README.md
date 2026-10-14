@@ -27,6 +27,10 @@
 - [贡献指南](#贡献指南)
 - [许可证](#许可证)
 
+## 文档状态
+
+本仓库为 AI 辅助接口测试实验项目，使用 Python / FastAPI。以下为现有功能与使用说明；本次更新修正仓库地址并整理中文首页，未重新运行历史接口、负载或供应商测试，不把文档描述视为生产性能验收。
+
 ## 简介
 
 AI接口测试框架是一个强大的自动化测试工具，专为API接口测试设计。它结合了传统测试方法和人工智能技术，提供全面的测试解决方案。框架支持批量测试、多种执行策略、自动化验证和AI驱动的测试报告生成。
@@ -63,8 +67,8 @@ AI接口测试框架是一个强大的自动化测试工具，专为API接口测
 1. 克隆仓库：
 
 ```bash
-git clone https://github.com/yourusername/ai-interface-testing.git
-cd ai-interface-testing
+git clone https://github.com/euler-gaozl/interfaca-testing.git
+cd interfaca-testing
 ```
 
 2. 创建虚拟环境（推荐）：
@@ -469,4 +473,4 @@ A: 在测试用例中添加认证信息：
 
 ## 许可证
 
-本项目采用 MIT 许可证 - 详情请参阅 [LICENSE](LICENSE) 文件。
+原项目文档声明采用 MIT；当前仓库未附独立 LICENSE 文件，本次文档整理不新增或更改许可证。
